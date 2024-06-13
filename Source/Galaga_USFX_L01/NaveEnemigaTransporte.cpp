@@ -24,7 +24,7 @@ void ANaveEnemigaTransporte::Mover(float DeltaTime)
 
 		SetActorLocation(FVector(1500.0f, PosicionActual.Y, PosicionActual.Z));
 
-	}
+	} 
 
 }
 
