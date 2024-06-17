@@ -46,7 +46,7 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 			ANaveEnemigaCaza* NaveEnemigaCazaTemporal = World->SpawnActor<ANaveEnemigaCaza>(PosicionNaveActual, rotacionNave);
 
 			TANavesEnemigas.Push(NaveEnemigaCazaTemporal);
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, FString::Printf(TEXT("Agregando nave enemiga caza a la colección: %d"),NaveIndex));
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, FString::Printf(TEXT("Agregando nave enemiga caza a la coleccion: %d"),NaveIndex));
 			EnemyCollection->AddEnemy(NaveEnemigaCazaTemporal);
 			NaveIndex++;
 
@@ -59,14 +59,14 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 			ANaveEnemigaTransporte* NaveEnemigaTransporteTemporal = World->SpawnActor<ANaveEnemigaTransporte>(PosicionNaveActual, rotacionNave);
 
 			TANavesEnemigas.Push(NaveEnemigaTransporteTemporal);
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, FString::Printf(TEXT("Agregando nave enemiga transporte a la colección: %d"), NaveIndex));
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, FString::Printf(TEXT("Agregando nave enemiga transporte a la coleccion: %d"), NaveIndex));
 			EnemyCollection->AddEnemy(NaveEnemigaTransporteTemporal);
 			NaveIndex++;
 
 		}
 
 		float nuevaposicionX2 = ubicacionInicioNavesEnemigasCazaAlfa.X - 600.0f;
-		// Crear el iterador después de haber agregado todos los enemigos a la colección
+		
 		
 	//}
 		for (int x = 0; x < 5; x++) {
@@ -80,32 +80,10 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 			NaveIndex++;
 
 		}
+		// Crear el iterador después de haber agregado todos los enemigos a la colección
 		EnemyIterator = EnemyCollection->CreateIterator();
 
-		//const int32 NumeroDeColumnasCaza = 2;
-		//const int32 NumeroDeFilasCaza = 5;
-
-		//for (int32 Columna = 0; Columna < NumeroDeColumnasCaza; ++Columna)
-		//{
-		//	TArray<ANaveEnemigaCaza*> NavesEnColumna;
-		//	for (int32 Fila = 0; Fila < NumeroDeFilasCaza; ++Fila)
-		//	{
-		//		FVector SpawningLocation = FVector(Columna * 300 + 300.0f, Fila * 200 + -500.0f, 250.0f);
-		//		FRotator SpawningRotation = FRotator::ZeroRotator;
-
-		//		ANaveEnemigaCaza* NuevaNaveCaza = GetWorld()->SpawnActor<ANaveEnemigaCaza>(SpawningLocation, SpawningRotation);
-		//		NavesEnColumna.Add(NuevaNaveCaza);
-		//		
-		//	}
-		//	ColumnaNavesEnemigasCaza.Add(Columna, NavesEnColumna);
-		//}
-
-		////NaveEnemigaTransporte01 = World->SpawnActor<ANaveEnemigaTransporte>(ubicacionNave01, rotacionNave);
-		////NaveEnemigaCaza01 = World->SpawnActor<ANaveEnemigaCaza>(ubicacionNave02, rotacionNave);
-
-		//TiempoTranscurrido = 0;
-
-
+		
 	
 	}
 
@@ -118,15 +96,15 @@ void AGalaga_USFX_L01GameMode::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	TiempoTranscurrido++;
 
-	// Asegúrate de que el iterador y la colección de enemigos han sido inicializados
+	
 	if (EnemyIterator && EnemyCollection)
 	{
-		//if (EnemyCollection)
-		//{
-			IIteradorInterface* Iterator = EnemyCollection->CreateIterator();
-			while (Iterator->HasNext())
+		
+		EnemyIterator->Reset();
+			//IIteradorInterface* Iterator = EnemyCollection->CreateIterator();
+			while (EnemyIterator->HasNext())
 			{
-				AActor* EnemyActor = Iterator->Next();
+				AActor* EnemyActor = EnemyIterator->Next();
 				ANaveEnemigaCaza* EnemyShip = Cast<ANaveEnemigaCaza>(EnemyActor);
 				ANaveEnemigaCazaAlfa* EnemyShip2 = Cast<ANaveEnemigaCazaAlfa>(EnemyActor);
 				if (EnemyShip)
@@ -134,7 +112,6 @@ void AGalaga_USFX_L01GameMode::Tick(float DeltaTime)
 					//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Moviendo y Disparando Nave Enemiga Caza: %s"));
 					EnemyShip->Mover(DeltaTime);
 					EnemyShip->Disparar();
-					//EnemyShip2->Mover(DeltaTime);
 				}
 				if (EnemyShip2)
 				{
@@ -143,8 +120,6 @@ void AGalaga_USFX_L01GameMode::Tick(float DeltaTime)
 					//EnemyShip2->Disparar();
 				}
 			}
-			// Asegúrate de limpiar el iterador si es necesario
-		//}
 	}
 
 	

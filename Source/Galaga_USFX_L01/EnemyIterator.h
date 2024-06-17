@@ -31,11 +31,9 @@ public:
 
 	virtual class AActor* Next() override;
 	virtual bool HasNext() override;
-
+	virtual void Reset() override { EnemyIndex = -1; }
 	private:
 
-
-		//TArray<AActor*> EnemyShips;
 		class AEnemyCollection* _EnemyCollection;
 		int32 EnemyIndex;
 };

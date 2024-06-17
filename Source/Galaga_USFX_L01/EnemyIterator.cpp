@@ -55,7 +55,7 @@ AActor* AEnemyIterator::Next()
 
 bool AEnemyIterator::HasNext()
 {
-	if (_EnemyCollection && _EnemyCollection->EnemyShips.IsValidIndex(EnemyIndex + 1))
+	if (_EnemyCollection && _EnemyCollection->EnemyShips.IsValidIndex(EnemyIndex + 1)) // Verifica si hay un siguiente elemento
 	{
 		return true; // Hay un siguiente elemento
 	}

@@ -24,10 +24,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 public:
 		virtual IIteradorInterface* CreateIterator() const override;
-
 		void AddEnemy(class AActor* Enemy);
-
-	//	TArray<class ANaveEnemiga*> GetEnemyShips() const { return EnemyCollection; }
 public:
 		TArray<class AActor*> EnemyShips;
 

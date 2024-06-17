@@ -27,4 +27,5 @@ public:
 	//virtual class AActor* GetCurrentShip() const = 0;
 	virtual class AActor* Next() = 0;
 	virtual bool HasNext() = 0;
+	virtual void Reset() = 0;
 };

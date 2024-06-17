@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+
+#include "EnemyCollection.h"
 #include "NaveEnemiga.h"
 #include "EnemyIterator.h"
-#include "EnemyCollection.h"
-
 // Sets default values
 AEnemyCollection::AEnemyCollection()
 {
@@ -31,7 +31,7 @@ IIteradorInterface* AEnemyCollection::CreateIterator() const
     AEnemyIterator* Iterator = GetWorld()->SpawnActor<AEnemyIterator>();
     if (Iterator)
     {
-        Iterator->SetEnemyCollection(const_cast<AEnemyCollection*>(this)); // Necesitas definir este método en AEnemyIterator.
+        Iterator->SetEnemyCollection(const_cast<AEnemyCollection*>(this)); // const_cast es usado para remover la constante de un objeto
         return Iterator;
     }
     return nullptr;
