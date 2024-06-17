@@ -42,4 +42,12 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+public:
+
+	class AEnemyCollection* EnemyCollection;
+
+	 class IIteradorInterface* EnemyIterator;
+
+	 int32 NaveIndex = 0;
+
 };

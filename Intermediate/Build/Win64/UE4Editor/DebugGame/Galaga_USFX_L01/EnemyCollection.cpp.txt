@@ -1,0 +1,11 @@
+C:\Users\HELEN\Downloads\Galaga_USFX_L01-master (2)\Galaga_USFX_L01-master\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX_L01\Definitions.Galaga_USFX_L01.h
+C:\Users\HELEN\Downloads\Galaga_USFX_L01-master (2)\Galaga_USFX_L01-master\Source\Galaga_USFX_L01\NaveEnemiga.h
+C:\Users\HELEN\Downloads\Galaga_USFX_L01-master (2)\Galaga_USFX_L01-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemiga.generated.h
+C:\Users\HELEN\Downloads\Galaga_USFX_L01-master (2)\Galaga_USFX_L01-master\Source\Galaga_USFX_L01\EnemyIterator.h
+C:\Users\HELEN\Downloads\Galaga_USFX_L01-master (2)\Galaga_USFX_L01-master\Source\Galaga_USFX_L01\IteradorInterface.h
+C:\Users\HELEN\Downloads\Galaga_USFX_L01-master (2)\Galaga_USFX_L01-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\IteradorInterface.generated.h
+C:\Users\HELEN\Downloads\Galaga_USFX_L01-master (2)\Galaga_USFX_L01-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\EnemyIterator.generated.h
+C:\Users\HELEN\Downloads\Galaga_USFX_L01-master (2)\Galaga_USFX_L01-master\Source\Galaga_USFX_L01\EnemyCollection.h
+C:\Users\HELEN\Downloads\Galaga_USFX_L01-master (2)\Galaga_USFX_L01-master\Source\Galaga_USFX_L01\CollectionInterface.h
+C:\Users\HELEN\Downloads\Galaga_USFX_L01-master (2)\Galaga_USFX_L01-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\CollectionInterface.generated.h
+C:\Users\HELEN\Downloads\Galaga_USFX_L01-master (2)\Galaga_USFX_L01-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\EnemyCollection.generated.h

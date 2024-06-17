@@ -26,7 +26,7 @@ public:
 	FORCEINLINE int GetCantidadlaser() const { return cantidadlaser; }
 	FORCEINLINE void SetCantidadlaser(int _cantidadlaser) { cantidadlaser = _cantidadlaser; }
 
-protected:
+public:
 
 	virtual void Tick(float DeltaTime);
 	virtual void Mover(float DeltaTime) override;
